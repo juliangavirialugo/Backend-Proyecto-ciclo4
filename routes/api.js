@@ -19,6 +19,6 @@ router.post("/comentario", comentario.ingresarComentario);
 // API FORMULARIO
 router.post("/form", formulario.ingresarFormulario);
 router.get("/formulario/:email", formulario.buscarFormulario);
-router.get("/formulario/:id", formulario.editarFormulario);
-router.delete("/formulario/:id", formulario.borrarFormulario);
+// router.get("/formulario/:id", formulario.editarFormulario);
+router.delete("/formulario/:email", formulario.borrarFormulario);
 module.exports = router;

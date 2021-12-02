@@ -20,22 +20,22 @@ module.exports.ingresarFormulario = async (req, res) => {
     });
 };
 
-module.exports.editarFormulario = async (req, res) => {
-  const id = req.params.id;
-  await Formulario.find({
-    id: id
-  }).then((response) => {
-    res.json(response);
-  });
-};
+// module.exports.editarFormulario = async (req, res) => {
+//   const id = req.params.id;
+//   await Formulario.find({
+//     id: id
+//   }).then((response) => {
+//     res.json(response);
+//   });
+// };
 
 module.exports.borrarFormulario = async (req, res) => {
   console.log(req.params);
   const {
-    id
+    email
   } = req.params;
   await Formulario.deleteOne({
-      _id: id
+      email: email
     })
     .then((respuesta) => {
       console.log(respuesta);
